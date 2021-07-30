@@ -86,7 +86,7 @@ class _ProjectCardState extends State<ProjectCard> {
                       )
                     : Container(),
                 SizedBox(
-                  height: height * 0.02,
+                  height: height * 0.01,
                 ),
                 Text(
                   widget.projectTitle,
@@ -100,21 +100,17 @@ class _ProjectCardState extends State<ProjectCard> {
                   height: height * 0.01,
                 ),
                 Text(
-                  widget.projectDescription,
+                  widget.projectDescription,softWrap: true,
                   textAlign: TextAlign.center,
                   style: GoogleFonts.montserrat(
-                      fontSize: height * 0.015,
+                      fontSize: height * 0.02,
                       fontWeight: FontWeight.w100,
-                      height: width >= 600 ? 2.0 : 1.5),
+                      height: width >= 600 ? 2.0 : 1),
                 ),
-                // SizedBox(
-                //   height: height * 0.01,
-                // ),
-                // widget.bottomWidget ?? Container(),
               ],
             ),
             AnimatedOpacity(
-              duration: Duration(milliseconds: 400),
+              duration: Duration(milliseconds: 300),
               opacity: isHover ? 0.0 : 1.0,
               child: FittedBox(
                 fit: BoxFit.fill,

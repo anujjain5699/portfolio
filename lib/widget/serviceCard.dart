@@ -70,11 +70,11 @@ class _ServiceCardState extends State<ServiceCard> {
             ),
             Text(
               widget.serviceTitle,
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.justify,
               style: GoogleFonts.montserrat(
-                fontSize: height * 0.02,
-                letterSpacing: 2.0,
-                fontWeight: FontWeight.w400,
+                fontSize:  width < 900 ?height * 0.02:height * 0.03,
+                letterSpacing: 1.5,
+                fontWeight: FontWeight.w500,
               ),
             ),
             SizedBox(
@@ -83,11 +83,11 @@ class _ServiceCardState extends State<ServiceCard> {
             Expanded(
               child: Text(
                 widget.serviceDescription,
-                textAlign: TextAlign.center,
+                textAlign: width < 900 ? TextAlign.justify:TextAlign.center,
                 style: GoogleFonts.montserrat(
-                    fontSize: height * 0.015,
-                    letterSpacing: 2.0,
-                    fontWeight: FontWeight.w100,
+                    fontSize: width < 900 ?height * 0.015:height * 0.02,
+                    //letterSpacing: 2.0,
+                    fontWeight: FontWeight.w300,
                     height: width < 900 ? 2.3 : 1.5),
               ),
             )

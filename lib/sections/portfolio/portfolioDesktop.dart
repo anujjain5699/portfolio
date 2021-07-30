@@ -42,7 +42,7 @@ class PortfolioDesktop extends StatelessWidget {
                 return WidgetAnimator(
                   child: ProjectCard(
                     cardWidth: width < 1200 ? width * 0.25 : width * 0.35,
-                    cardHeight: width < 1200 ? height * 0.28 : height * 0.1,
+                    cardHeight: width < 1200 ? height * 0.28 : height * 0.15,
                     backImage: kProjectsBanner[index],
                     projectIcon: kProjectsIcons[index],
                     projectTitle: kProjectsTitles[index],
